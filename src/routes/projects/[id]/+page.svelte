@@ -13,9 +13,11 @@
 </script>
 
 {#if projeto}
+<main>
 	<h1>{projeto.nome}</h1>
 	<p>{projeto.descricao}</p>
 	<img src={projeto.img} alt={projeto.nome} />
+</main>
 {:else}
 	<h1>Projeto não encontrado</h1>
 {/if}

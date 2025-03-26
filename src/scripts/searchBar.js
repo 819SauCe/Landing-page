@@ -19,6 +19,15 @@ export function initSearch() {
 	const resultadosDiv = document.getElementById('resultados');
   const container = document.querySelector('.searchbox');
 
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      const primeiroLink = resultadosDiv.querySelector('a');
+      if (primeiroLink) {
+        window.location.href = primeiroLink.href;
+      }
+    }
+  });
+
   document.addEventListener('click', (e) => {
 		if (!container.contains(e.target)) {
 			resultadosDiv.style.height = '0px';

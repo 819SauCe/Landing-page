@@ -53,8 +53,8 @@
     <a href="/projects">Projects</a>
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
-    <a href="/button">button</a>
-    <a href="/more">More</a>
+    <a href="/websites">websites</a>
+    <a href="/drivers">drivers</a>
     <a href="/+">+</a>
 </div>
 </header>
@@ -63,6 +63,7 @@
     header {
         position: fixed;
         width: 100%;
+        height: auto;
         background-color: rgb(10, 10, 10);
         border: 1px solid rgb(47, 47, 47);
         color: white;
@@ -178,8 +179,8 @@
     .nav {
         display: flex;
         justify-content: center;
-        margin-bottom: 0.2%;
-        margin-top: 0.2%;
+        margin-bottom: 0.3%;
+        margin-top: 0.3%;
         gap: 60px;
     }
 

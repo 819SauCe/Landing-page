@@ -12,6 +12,10 @@
         margin: 0%;
         border: 0%;
     }
+
+    :global(main) {
+        padding-top: 5%;
+    }
 </style>
 
 <Header />

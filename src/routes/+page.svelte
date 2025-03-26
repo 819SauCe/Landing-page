@@ -13,7 +13,7 @@
 <style>
     main {
         width: 100%;
-        height: 50rem;
+        height: 39rem;
         background-image: url(../img/generic-img/space_background.gif);
         background-repeat: no-repeat;
         background-size: cover;
@@ -23,7 +23,7 @@
 
     .apresentacao {
         margin-left: 5%;
-        padding-top: 10%;
+        padding-top: 5%;
         max-width: 600px;
         line-height: 1.6;
         white-space: pre-line;
