@@ -1,26 +1,31 @@
 <script>
-    import { onMount } from 'svelte';
-    import the_fool from '../img/generic-img/the_fool.png';
-    import the_fool_back from '../img/generic-img/the_fool_back.webp';
+	import { onMount } from 'svelte';
+	import { initSearch } from '../scripts/searchBar.js';
+	import the_fool from '../img/generic-img/the_fool.png';
+	import the_fool_back from '../img/generic-img/the_fool_back.webp';
 
-    let isSidebarVisible = false;
+	let isSidebarVisible = false;
 
-    function toggleSidebar() {
-        isSidebarVisible = !isSidebarVisible;
-    }
+	function toggleSidebar() {
+		isSidebarVisible = !isSidebarVisible;
+	}
 
-    onMount(() => {
-        const card = document.querySelector('.card-logo');
-        const sidebar = document.getElementById('sidebar');
+	onMount(() => {
+		const card = document.querySelector('.card-logo');
+		const sidebar = document.getElementById('sidebar');
 
-        if (card && sidebar) {
-            card.addEventListener('click', () => {
-                toggleSidebar();
-            });
-        }
-    });
+		if (card && sidebar) {
+			card.addEventListener('click', () => {
+				toggleSidebar();
+			});
+		}
+
+		initSearch();
+	});
 </script>
 
+
+<header>
 <div class="card-logo {isSidebarVisible ? 'move' : ''}">
     <div class="card-inner">
         <img src={the_fool} class="card-front" alt="Carta frente" />
@@ -49,22 +54,19 @@
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
 </div>
+</header>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Rock+Salt&display=swap');
-    :global(body){
+    header {
         background-color: black;
         border: 1px solid rgb(47, 47, 47);
-        font-family: "Fira Code", monospace;
-        font-optical-sizing: auto;
-        padding: 0%;
-        margin: 0%;
+        color: white;
     }
 
     .card-logo {
         position: absolute;
         margin-left: 2%;
-        margin-top: 1%;
+        margin-top: 0.5%;
         width: 43px;
         height: 60px;
         perspective: 1000px;
@@ -134,6 +136,7 @@
         width: 100%;
         height: 30px;
         font-size: 18px;
+        border-radius: 7px;
     }
 
     .searchBTN {
@@ -142,7 +145,7 @@
         right: 0;
         width: 32px;
         height: 32px;
-        background: rgb(240, 240, 240);
+        background: rgba(240, 240, 240, 0);
         border: none;
         display: flex;
         justify-content: center;
@@ -172,9 +175,9 @@
 
     #resultados {
         position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
+        top: 160%;
+        left: 0.8%;
+        width: 99%;
         background: white;
         z-index: 10;
         overflow: hidden;
