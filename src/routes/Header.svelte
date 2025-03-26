@@ -53,12 +53,17 @@
     <a href="/projects">Projects</a>
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
+    <a href="/button">button</a>
+    <a href="/more">More</a>
+    <a href="/+">+</a>
 </div>
 </header>
 
 <style>
     header {
-        background-color: black;
+        position: fixed;
+        width: 100%;
+        background-color: rgb(10, 10, 10);
         border: 1px solid rgb(47, 47, 47);
         color: white;
     }
@@ -101,23 +106,27 @@
     }
 
     .sidebar {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 270px;
-        height: 100%;
-        background: #222;
-        transition: transform 0.3s ease;
-        transform: translateX(-100%);
-        z-index: 5;
-    }
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 320px;
+	height: 100%;
+	background: rgba(20, 20, 20, 0.95);
+	backdrop-filter: blur(6px);
+	box-shadow: 4px 0 10px rgba(0, 0, 0, 0.6);
+	border-right: 1px solid rgba(255, 255, 255, 0.1);
+	transition: transform 0.3s ease;
+	transform: translateX(-100%);
+	z-index: 999;
+}
+
 
     .sidebar.show {
         transform: translateX(0);
     }
 
     .card-logo.move {
-        margin-left: 280px;
+        margin-left: 340px;
         transition: margin-left 0.3s;
     }
 
@@ -163,14 +172,15 @@
         color: white;
         text-decoration: none;
         font-size: 15px;
-        margin-left: 1.5%;
         padding-top: 0%;
     }
 
     .nav {
         display: flex;
-        margin-left: 25%;
-        padding-bottom: 5px;
+        justify-content: center;
+        margin-bottom: 0.2%;
+        margin-top: 0.2%;
+        gap: 60px;
     }
 
     #resultados {
