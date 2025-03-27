@@ -24,7 +24,7 @@
 	});
 </script>
 
-
+<div class="e-header">
 <header>
 <div class="card-logo {isSidebarVisible ? 'move' : ''}">
     <div class="card-inner">
@@ -48,20 +48,20 @@
     </div>
 </div>
 
-<div class="nav">
-    <a href="/">Home</a>
-    <a href="/projects">Projects</a>
-    <a href="/about">About</a>
-    <a href="/contact">Contact</a>
-    <a href="/websites">websites</a>
-    <a href="/drivers">drivers</a>
-    <a href="/+">+</a>
-</div>
+    <div class="nav">
+        <a href="/">Home</a>
+        <a href="/projects">Projects</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/websites">websites</a>
+        <a href="/drivers">drivers</a>
+        <a href="/+">+</a>
+    </div>
 </header>
+</div>
 
 <style>
     header {
-        position: fixed;
         width: 100%;
         height: auto;
         background-color: rgb(10, 10, 10);
