@@ -1,6 +1,13 @@
 import noPicture from '../img/projects/no-picture.png';
 
 let projects = [
+	{ img: null, nome: "Home", descricao: "home-page", link: "/"},
+	{ nome: "Projects", descricao: "projects-page", link: "/projects"},
+	{ nome: "About", descricao: "about-page", link: "/about"},
+	{ nome: "Contact", descricao: "Contact-page", link: "/contact"},
+	{ nome: "Websites", descricao: "websites-page", link: "/websites"},
+	{ nome: "Drivers", descricao: "drivers-page", link: "/drivers"},
+	{ nome: "about", descricao: "about-page", link: "/about"},
 	{ img: noPicture, nome: "Projeto 1", descricao: "teste", link: "/projects/1", id: 1 },
 	{ img: noPicture, nome: "Projeto 2", descricao: "teste", link: "/projects/2", id: 2 },
 	{ img: noPicture, nome: "Projeto 3", descricao: "teste", link: "/projects/3", id: 3 },

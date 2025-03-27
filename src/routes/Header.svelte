@@ -44,7 +44,7 @@
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
       </button>
-      <div id="resultados" style="margin-top:-2.8%;"></div>
+      
     </div>
 </div>
 
@@ -58,6 +58,8 @@
         <a href="/+">+</a>
     </div>
 </header>
+
+<div id="resultados" style="margin-top:-2.8%; position:absolute; width: 100%;"></div>
 </div>
 
 <style>
@@ -185,15 +187,17 @@
     }
 
     #resultados {
-        position: absolute;
-        top: 160%;
-        left: 0.8%;
-        width: 99%;
+        position: fixed;
+        top: 93px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 685px;
         background: white;
-        z-index: 10;
-        overflow: hidden;
+        z-index: 9999;
         border-bottom-left-radius: 12px;
         border-bottom-right-radius: 12px;
+        overflow: hidden;
     }
 
     :global(#resultados a) {
