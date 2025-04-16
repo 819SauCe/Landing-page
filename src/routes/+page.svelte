@@ -5,11 +5,21 @@
 <main>
     <h1>Supp i am Vitor💀</h1>
     <div class="apresentacao">
-    <p>
-        <span class="rec">Sou Vitor, desenvolvedor web com foco em soluções criativas.<br>
-        Sempre fui fascinado pela combinação entre lógica e estética.<br>
-        Meu objetivo é transformar ideias em produtos funcionais.<br>
-        Gosto de SvelteKit, JavaScript e café ☕.<br>
+    <p><span class="rec">
+        Into Arduino, code in Python, and obsessed with Rust.<br>
+        Database? PostgreSQL — fast and solid.<br>
+        Building a 3-node Raspberry Pi cluster.<br>
+        System? Arch Linux, of course.<br>
+        <br>
+        Frontend? Svelte, HTML, JS, CSS, PicoCSS, SASS.<br>
+        Also know .liquid from Shopify — done it all.<br>
+        <br>
+        Always wanted to study at Fatech, but living far and broke, it didn’t<br>
+        happen.<br>
+        <br>
+        Still, I always coded better than most people who got in.<br>
+            
+        Tech is what I do — my way.<br>
     </p>
     <img class="astronaut" src="{astronaut}" alt="astronaut">
 </div>
@@ -27,22 +37,21 @@
         background-size: cover;
         background-position: center;
         color: white;
+        margin-top: 78px;
     }
 
     .apresentacao {
         width: 100%;
         height: auto;
-        margin-left: 5%;
-        line-height: 1.6;
+        line-height: 1.5;
         display: flex;
-        align-items: center;
+        text-align: center;
     }
 
     h1 {
-        max-width: 25rem;
-        margin-left: 10%;
+        max-width: 21rem;
+        margin-left: 17%;
         margin-top: 5%;
-        position: absolute;
     }
 
     .apresentacao p {

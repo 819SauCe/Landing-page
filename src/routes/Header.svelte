@@ -1,8 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { initSearch } from '../scripts/searchBar.js';
-	import the_fool from '../img/generic-img/the_fool.png';
-	import the_fool_back from '../img/generic-img/the_fool_back.webp';
+	import menu_button from '../img/generic-img/menu.gif';
 
 	let isSidebarVisible = false;
 
@@ -26,10 +25,9 @@
 
 <div class="e-header">
 <header>
-<div class="card-logo {isSidebarVisible ? 'move' : ''}">
+    <div class={`card-logo ${isSidebarVisible ? 'move' : ''}`}>
     <div class="card-inner">
-        <img src={the_fool} class="card-front" alt="Carta frente" />
-        <img src={the_fool_back} class="card-back" alt="Carta verso" />        
+        <img src={menu_button} class="card-front" alt="Carta frente" />  
     </div>
 </div>
 
@@ -38,13 +36,6 @@
 <div class="searchbar">
     <div class="searchbox">
       <input class="search" type="text" placeholder="Search..." />
-      <button class="searchBTN">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-      </button>
-      
     </div>
 </div>
 
@@ -64,21 +55,23 @@
 
 <style>
     header {
+        position: fixed;
         width: 100%;
-        height: auto;
+        max-height: 78px;
         background-color: rgb(10, 10, 10);
         border: 1px solid rgb(47, 47, 47);
         color: white;
     }
 
     .card-logo {
-        position: absolute;
-        margin-left: 2%;
-        margin-top: 0.5%;
+        position: fixed;
+        left: 2%;
+        top: 0.5%;
         width: 43px;
         height: 60px;
         perspective: 1000px;
         animation: float 3s ease-in-out infinite;
+        transition: left 0.3s;
     }
 
     .card-inner {
@@ -90,12 +83,10 @@
     }
 
     .card-logo:hover .card-inner {
-        transform: rotateY(180deg);
         cursor: pointer;
     }
 
-    .card-front,
-    .card-back {
+    .card-front{
         position: absolute;
         width: 100%;
         height: 100%;
@@ -104,24 +95,20 @@
         border-radius: 4px;
     }
 
-    .card-back {
-        transform: rotateY(180deg);
-    }
-
     .sidebar {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 320px;
-	height: 100%;
-	background: rgba(20, 20, 20, 0.95);
-	backdrop-filter: blur(6px);
-	box-shadow: 4px 0 10px rgba(0, 0, 0, 0.6);
-	border-right: 1px solid rgba(255, 255, 255, 0.1);
-	transition: transform 0.3s ease;
-	transform: translateX(-100%);
-	z-index: 999;
-}
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 320px;
+        height: 100%;
+        background: rgba(20, 20, 20, 0.95);
+        backdrop-filter: blur(6px);
+        box-shadow: 4px 0 10px rgba(0, 0, 0, 0.6);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease;
+        transform: translateX(-100%);
+        z-index: 999;
+    }
 
 
     .sidebar.show {
@@ -129,8 +116,7 @@
     }
 
     .card-logo.move {
-        margin-left: 340px;
-        transition: margin-left 0.3s;
+        left: 340px;
     }
 
     .searchbar {
@@ -151,24 +137,14 @@
         border-radius: 7px;
     }
 
-    .searchBTN {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 32px;
-        height: 32px;
-        background: rgba(240, 240, 240, 0);
-        border: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
+    .search::placeholder {
+        padding-left: 1%;
     }
 
-    .searchBTN svg {
-        width: 90px;
-        height: 25px;
-        stroke: black;
+    .search:focus {
+        outline: none;
+        box-shadow: none;
+        border: none;
     }
 
     a {
